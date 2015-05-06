@@ -1,1 +1,39 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="50" inline="false" x="180" y="137">
+    <field name="MODE">UNTIL</field>
+    <value name="NUMBER">
+      <block type="sensor_button" id="215">
+        <field name="OBJECT">ENTER</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="led_select" id="81" inline="true">
+        <field name="ACTION">FLASH</field>
+        <value name="LED">
+          <block type="math_number" id="151">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="led_select" id="96" inline="true">
+            <field name="ACTION">FLASH</field>
+            <value name="LED">
+              <block type="math_number" id="173">
+                <field name="NUM">5</field>
+              </block>
+            </value>
+            <next>
+              <block type="robot_delay" id="123" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="183">
+                    <field name="NUM">200</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</xml>
